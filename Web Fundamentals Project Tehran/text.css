@@ -1,0 +1,40 @@
+h {
+  font-size: 42px;
+  font-weight: none;
+  font-family: century Gothic;
+}
+
+h1 {
+  font-size: 30px;
+  font-weight: none;
+  font-family:century Gothic;
+  text-align:left;
+  margin-left: 50px;
+}
+
+p {
+  font-size: 24px;
+  font-family: century Gothic;
+  text-align: left;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+p1 {
+  font-style: italic;
+}
+p2 {
+  font-size: 24px;
+  font-family: century Gothic;
+  text-align: center;
+
+}
+hr {
+  opacity: 0.2;
+}
+
+ul {
+  list-style: none;
+}
+body {
+  background-color:#efefef;
+}

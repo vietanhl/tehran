@@ -1,0 +1,53 @@
+<html>
+  <form type=get action="form2.html">
+<p>
+  <head>
+  <title>
+    Shopping cart form
+  </title>
+    <meta name="Form" content="Shopping cart form">
+
+  <link rel="stylesheet" type="text/css" href="text.css">
+
+  </head>
+<body>
+  <FORM NAME="visitorform" METHOD=GET ACTION="form2.html" TARGET="_top">
+    <h>Please fill in the form in order to complete your order:</h>
+    <br><hr>
+    <div> First name </div>
+    <input type = text name="firstname">
+  <p>
+    <div> Last name </div>
+    <input type = text name = "surname">
+  <p>
+    <div> Date of birth </div>
+    <input type ="date" name="dob">
+  <p>
+    <div> Email address </div>
+    <input type ="Email" name= "email">
+  <p>
+    <div>Password</div>
+    <input type="Password" name="Password">
+  <p>
+    <div> Select your country </div>
+    <select name="Country" size=1>
+      <option selected> None
+      <option value = "UK"> United Kingdom
+      <option value = "USA"> USA
+      <option value = "Australia"> Australia
+      <option value = "Asia"> Asia
+      <option value = "other"> Other
+    </select>
+  <p>
+    <div> Select your gender </div>
+    <input type="radio" name= "radioGender" value="Male" checked> Male
+    <input type="radio" name= "radioGender" value="Female"> Female
+
+    <div> Subscribe <input type="checkbox" name="checkSubscription" value="true"></div>
+
+    <input type="submit" name ="OKbutton" value="Done">
+
+
+</body>
+</form>
+</html>

@@ -1,0 +1,40 @@
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="text.css">
+  <script>
+  var x=document.getElementById("demo");
+  function getLocation()
+    {
+    if (navigator.geolocation)    {
+      navigator.geolocation.getCurrentPosition(showPosition);
+    }
+    else{
+          x.innerHTML="Geolocation is not supported by this browser.";
+    }
+    }
+  function showPosition(position)
+    {
+    x.innerHTML="Lat: " + position.coords.latitude +
+    "<br>Long: " + position.coords.longitude;
+    }
+  </script>
+</head>
+
+<body>
+  <center><h>Tehran Forum</h><hr>
+<p>
+  Join the Tehran forum to meet up with friends and find travellers just like you. <br>Simply click
+<a href=" http://btehranqa.runboard.com"> here </a> to join in the chat and be part of the Tehran traveller's community.
+</center>
+
+<p id="demo">...And tell us where you are</p>
+<center><button onclick="getLocation()">Click Me</button></center>
+
+
+<address>
+	Website by <a href="mailto:viet-anh.le@hotmail.co.uk">Viet Le</a>.<br>
+	Please click <a href="mailto:viet-anh.le@feedback.com"> here </a> to send any feedback on the website.
+</address>
+
+</body>
+</html>

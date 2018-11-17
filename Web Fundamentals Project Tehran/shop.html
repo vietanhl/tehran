@@ -1,0 +1,133 @@
+<HTML>
+	<HEAD>
+		<TITLE>
+			Shop
+		</TITLE >
+		<link rel="stylesheet" type="text/css" href="text.css">
+		<meta name="shop" content="Brochures of Tehran">
+			<SCRIPT LANGUAGE="JavaScript">
+				brochures = new Array;
+				count = 0;
+				function confirmIt()
+				{
+			   	alert("Please fill in the form to complete your order");
+				  window.open('form.html').document.body.innerHTML += brochureString;
+				}
+
+				function selectedShoppingCart()
+				{
+			  	selectedBrochure();
+			  	brochureString = "<p>Your shopping cart Contains</p><table border = 1 >"
+
+			 	for (i = 0; i < count; i++)
+			  	{
+				 	brochureString += "<tr><td>" + brochures[i] + "</td></tr>";
+			  	}
+			  	brochureString += '</table>';
+
+			  	brochureString += '<FORM NAME="confirm"><input type="button" name="confirm" value="Confirm Requirement" onClick="confirmIt()"></form>';
+
+					var shoppingCart = document.getElementById("top");
+ 			  	shoppingCart.innerHTML = brochureString;
+					}
+
+					function selectedBrochure()
+					{
+			  	if(document.BrochureChoice.Brochure[0].checked == true)
+			  	{
+				 	addBrochureToCart("Map of the city");
+			  	}
+			  	if(document.BrochureChoice.Brochure[1].checked == true)
+			  	{
+				 	addBrochureToCart("City Walks");
+			  	}
+			  	if(document.BrochureChoice.Brochure[2].checked == true)
+			  	{
+				 	addBrochureToCart("Night Life");
+			  	}
+			  	if(document.BrochureChoice.Brochure[3].checked == true)
+			  	{
+				 	addBrochureToCart("Top Attractions");
+			  	}
+			  	if(document.BrochureChoice.Brochure[4].checked == true)
+			  	{
+				 	addBrochureToCart("Food Tour");
+			  	}
+			  	if(document.BrochureChoice.Brochure[5].checked == true)
+			  	{
+				 	addBrochureToCart("Caspian Sea");
+			  	}
+			  	if(document.BrochureChoice.Brochure[6].checked == true)
+			  	{
+					addBrochureToCart("Religious buildings");
+			  	}
+			  	if(document.BrochureChoice.Brochure[7].checked == true)
+			  	{
+						addBrochureToCart("History");
+			  	}
+			  	if(document.BrochureChoice.Brochure[8].checked == true)
+			  	{
+						addBrochureToCart("Learn Persian");
+			  	}
+				}
+
+				function addBrochureToCart(inputStr)
+				{
+			   	brochures[count] = inputStr;
+			   	count++;
+				}
+				</SCRIPT>
+				<style type="text/css">
+				ul{
+			    list-style-type: none;
+			    margin:0;
+			    padding:0;
+			    overflow: hidden;
+
+			  }
+				</style>
+			</HEAD>
+				<BODY >
+					<center><h>Shop for brochures</h></center>
+					<div id="top">
+
+						<hr>
+
+						<div>
+							<FORM NAME="BrochureChoice">
+								<ul>
+								<div><img src="shop1.png"  alt= "map"  height = "150" width = "150"  ></div>
+								<input type="checkbox" name="Brochure" value="Map" > Map of the City
+								<hr><br>
+								<div><img src="shop2.png"  alt= "city"  height = "150" width = "150"  ></div>
+								<input type="checkbox" name="Brochure" value="Walks" > City Walks
+								<hr><br>
+								<div><img src="shop3.png"  alt= "night"  height = "150" width = "150"  ></div>
+								<input type="checkbox" name="Brochure" value="Life" > Night Life
+								<hr><br>
+								<div><img src="shop4.svg"  alt= "attractions"  height = "150" width = "150" ></div>
+								<input type="checkbox" name="Brochure" value="Building" > Top Attractions <br />
+								<hr><br>
+								<div><img src="shop5.png"  alt= "food"  height = "150" width = "150" ></div>
+								<input type="checkbox" name="Brochure" value="LimeStreet" > Food Tour
+								<hr><br>
+								<div><img src="shop6.png"  alt= "sea"  height = "150" width = "150" ></div>
+								<input type="checkbox" name="Brochure" value="Wharf" > Caspian Sea
+								<hr><br>
+								<div><img src="shop7.png"  alt= "Religious"  height = "150" width = "150" ></div>
+								<input type="checkbox" name="Brochure" value="Parliament" > Religious buildings
+								<hr><br>
+								<div><img src="shop8.png"  alt= "hist"  height = "150" width = "150" ></div>
+								<input type="checkbox" name="Brochure" value="Cathedral" > History
+								<hr><br>
+								<div><img src="shop9.png"  alt= "persian"  height = "150" width = "150"></div>
+								<input type="checkbox" name="Brochure" value="Dungeons" > Learn Persian
+								<hr><br>
+								<input type="button" name="shoppingCart" value="Shopping Cart" onClick="selectedShoppingCart()"><br />
+							</form>
+						</ul>
+							<br><br><hr><br><br>
+						</div>
+
+					</BODY >
+</HTML>
